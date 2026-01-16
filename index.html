@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgusTeam Australia - Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.stockcake.com/public/8/f/2/8f232cdb-1ba5-42aa-be75-f9fbb33c2f6c/corporate-team-meeting-stockcake.jpg') center/cover no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .logo {
+            position: absolute;
+            top: 30px;
+            left: 50px;
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+            z-index: 10;
+        }
+
+        nav {
+            text-align: center;
+            padding: 40px 0 20px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: inline-flex;
+            background-color: rgba(255, 255, 255, 0.85);
+            border-radius: 50px;
+            padding: 10px 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 12px 30px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            background-color: #d0e0d0;
+            color: #2e7d32;
+        }
+
+        .phone-button {
+            position: absolute;
+            top: 50px;
+            right: 50px;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .phone-button:hover {
+            background-color: #d0e0d0;
+            color: #2e7d32;
+            transform: scale(1.05);
+        }
+
+        .hero-content {
+            text-align: center;
+            color: white;
+            padding-bottom: 100px;
+        }
+
+        .hero-content h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-content h1 span {
+            display: block;
+            font-size: 72px;
+            font-weight: 900;
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 18px 50px;
+            background-color: rgba(255, 255, 255, 0.25);
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 50px;
+            border: 3px solid white;
+            backdrop-filter: blur(10px);
+            transition: all 0.4s ease;
+        }
+
+        .cta-button:hover {
+            background-color: white;
+            color: #333;
+            transform: scale(1.05);
+        }
+
+    /* Section - Coach Bio*/
+     section {
+      padding: 100px;
+      background: #e9e6c3;
+    }
+    h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      color: darkolivegreen;
+      font-family: serif;
+    }
+    .header_header {
+      font-family: Tahoma;
+    }
+    .bio {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 50px;
+      align-items: center;
+    }
+    .bio img {
+      width: 100%;
+      max-width: 320px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+    .bio-right ul {
+      list-style: none;
+      margin-top: 20px;
+    }
+    .bio-right ul li {
+      margin-bottom: 12px;
+      font-size: 1.5rem;
+    }
+    .bio-right ul li:before {
+      content: "• ";
+      color: green;
+      font-size: 1.4rem;
+      margin-right: 8px;
+    }
+
+    /* Services */
+    #services_section {
+    padding: 80px 20px;
+    background: rgb(71, 79, 67);
+}
+
+.cs-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ---------- Header ---------- */
+.cs-content {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 60px;
+}
+
+.cs-topper {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #caa46e;
+    font-weight: 600;
+}
+
+.cs-title {
+    font-size: 36px;
+    line-height: 1.2;
+    margin: 16px 0;
+    color: #dcc199;
+}
+
+.cs-text {
+    font-size: 16px;
+    color: #dcc199;
+}
+
+/* ---------- Cards ---------- */
+.cs-card-group {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.cs-item {
+    position: relative;
+    background: #d0cdac;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cs-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* ---------- Card Content ---------- */
+.cs-link {
+    display: block;
+    padding: 32px 24px;
+    position: relative;
+    z-index: 2;
+}
+
+.cs-icon {
+    width: 40px;
+    margin-bottom: 16px;
+}
+
+.cs-h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.cs-item-text {
+    font-size: 15px;
+    color: #555;
+}
+
+/* ---------- Hover Image ---------- */
+.cs-image {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+}
+
+.cs-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cs-item:hover .cs-image {
+    opacity: 1;
+}
+
+/* Dark overlay for readability */
+.cs-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+}
+
+/* Text color on hover */
+.cs-item:hover .cs-h3,
+.cs-item:hover .cs-item-text {
+    color: #ffffff;
+}
+
+.cs-item:hover .cs-icon {
+    filter: brightness(0) invert(1);
+}
+
+   .disclaimer {
+      background: #1a1a1a;
+      text-align: center;
+      padding: 100px;
+      font-size: 1.3rem;
+      color: white 
+    }
+
+
+    @media (max-width: 900px) {
+      .grid-2col {
+        grid-template-columns: 1fr;
+        gap: 60px;
+      }
+      
+      .nav-links {
+        display: none; /* you can add mobile menu later */
+      }
+    }
+  </style>
+</head>
+<body>
+      </style>
+</head>
+<body>
+    <header>
+        <div class="logo">AGUSTEAM<br>AUSTRALIA</div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Who We Are</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div><a href="#" class="phone-button">+1 813 2234 020</a></div>
+
+        <div class="hero-content">
+            <h1>
+                Our Service<br>
+                <span>Understand Your Needs</span>
+            </h1>
+            <a href="#contact" class="cta-button">LET'S TALK!</a>
+        </div>
+    </header>
+
+  <section>
+    <h2>Your Financial Coach</h2>
+    <p class="header_header" style="text-align:center; font-size:1.3rem; margin-bottom:50px;">AgusTeam Financial Planning</p>
+
+    <div class="bio">
+      <img src="https://images.unsplash.com/photo-1666985152838-d9df5c0c1b20?q=80&w=731&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="John Agus">
+
+      <div class="bio-right">
+        <p>Hi there! Your Financial Coach is myself, John Agus,</p>
+        <p>from AgusTeam Financial Coaching. I am here to assist you with your financial matters.</p>
+        <p>In addition to that, I am the managing director of the AgusTeam Financial Coaching.</p> 
+        <p>In addition, as a result of my vast expertise, I am a member of the Institute of Accountants as an associate.</p>
+
+        <h3 style="margin: 30px 0 15px;">Experiences - John Agus</h3>
+        <ul>
+          <li>Over 20 Years of experience in Superannuation Industry.</li>
+          <li>Member of the SAT Auditor Group.</li>
+          <li>Holding a senior position in ADA Australia.</li>
+          <li>Founded AgusTeam Financial coaching in 2005.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+    
+ </style>
+</head>
+
+<body>
+
+<section id="services_section">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Our Services</span>
+            <h2 class="cs-title">We Are Committed To Delivering Top Quality Legal Services</h2>
+            <p class="cs-text">
+                At AgusTeam Financial Planning, let us help you solve problems so that you can focus on your mission.
+                We support businesses through periods of expansion, succession.
+            </p>
+        </div>
+
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <a class="cs-link" href="#">
+                    <img class="cs-icon" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fcase.svg" alt="">
+                    <h3 class="cs-h3">Financial Coaching</h3>
+                    <p class="cs-item-text">
+                        We've collaborated with thousands individually to develop sound financial habits, set well-defined objectives, and design a sustainable plan for enduring wealth and stability..
+                    </p>
+                </a>
+                <picture class="cs-image">
+                    <img src="https://plus.unsplash.com/premium_photo-1661443781814-333019eaad2d?q=80&w=1251&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                </picture>
+            </li>
+
+            <li class="cs-item">
+                <a class="cs-link" href="#">
+                    <img class="cs-icon" src="https://cdn-icons-png.flaticon.com/512/44/44499.png" alt="">
+                    <h3 class="cs-h3">Investment Administration & Reporting</h3>
+                    <p class="cs-item-text">
+                        We've handled all the complex backend logistics of your investments, offering comprehensive performance monitoring and clear reporting to ensure you have a precise understanding of your position at all times.
+                    </p>
+                </a>
+                <picture class="cs-image">
+                    <img src="https://plus.unsplash.com/premium_photo-1681487769650-a0c3fbaed85a?q=80&w=1255&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                </picture>
+            </li>
+
+            <li class="cs-item">
+                <a class="cs-link" href="#">
+                    <img class="cs-icon" src="https://cdn-icons-png.flaticon.com/512/48/48982.png" alt="">
+                    <h3 class="cs-h3">Insurance Advice</h3>
+                    <p class="cs-item-text">
+                        We assess your risk profile to provide customized insurance solutions, ensuring that you, your family, and your assets are comprehensively protected against unforeseen events in life.
+                    </p>
+                </a>
+                <picture class="cs-image">
+                    <img src="https://images.unsplash.com/photo-1637763723578-79a4ca9225f7?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                </picture>
+            </li>
+
+            <li class="cs-item">
+                <a class="cs-link" href="#">
+                    <img class="cs-icon" src="https://cdn-icons-png.freepik.com/512/49/49693.png" alt="">
+                    <h3 class="cs-h3">Self-Managed Superannuation Service</h3>
+                    <p class="cs-item-text">
+                        We offer professional assistance to help you create and manage your own superannuation fund, giving you the freedom to choose the investments you want, such as real estate and direct shares, while guaranteeing complete adherence to complex tax laws and regulatory requirements.
+                    </p>
+                </a>
+                <picture class="cs-image">
+                    <img src="https://images.unsplash.com/photo-1579621970795-87facc2f976d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                </picture>
+            </li>
+        </ul>
+    </div>
+</section>
+
+  <div class="disclaimer">
+      <p><strong>Legal Disclaimer:</strong> AgusTeam Financial Consulting does not provide other services rather than Financial Consulting.</p> 
+      <p>All Accounting Services are offered through Winter Springs Accountancy and all financial coaching services are offered through AgusTeam Coaching.</p>
+    </div>
+  </div>
+
+  <button id="back-to-top" title="Back to top">↑</button>
+
+<style>
+  #back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 999;
+  }
+
+  #back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  #back-to-top:hover {
+    background: #1b5e20;
+    transform: scale(1.1);
+  }
+</style>
+
+<script>
+window.addEventListener('scroll', () => {
+  const btn = document.getElementById('back-to-top');
+  if (window.scrollY > 400) {
+    btn.classList.add('show');
+  } else {
+    btn.classList.remove('show');
+  }
+});
+
+document.getElementById('back-to-top').addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
+</body>
+</html>
